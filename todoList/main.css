@@ -1,0 +1,177 @@
+:root{
+   --dark: #353f4f;
+   --darker:#1c2633;
+   --darkest:#101725;
+   --gray: rgb(124, 128, 147);
+   --light: #EEE;
+   --pink: rgb(205, 80, 213);
+   --purple: #8458ec;
+   --red: rgba(194, 7, 7, 0.901);
+   --violet: rgb(180, 22, 169);
+}
+
+*{
+   box-sizing: border-box;
+   margin: 0;
+   font-family: 'Fira-sans', sans-serif;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   background: var(--dark);
+   color: #fff;
+}
+
+header {
+   padding: 5vh 1vw;
+   max-width: 800px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+header h1 {
+   font-size: 2rem;
+   font-weight: 300;
+   color: var(--gray);
+   margin-bottom: 2vh;
+}
+
+#taskForm{
+   display: flex;
+}
+
+#taskInput{
+   flex: 1 1 0%;
+   background-color: var(--darker);
+   color: var(--light);
+   border-radius: 1rem;
+   margin-top: 1vh;
+   margin-right: 1vw;
+   padding-left: 1vw;
+   font-size: 1.25rem;
+   height: 6vh;
+}
+
+#taskInput::placeholder {
+   color: var(--gray);
+}
+
+input, button {
+   appearance: none;
+   background: none;
+   outline: none;
+   border: none;
+}
+
+.add__task {
+   background-image: linear-gradient(to right, var(--pink), var(--purple));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-size: 1.25rem;
+   border: 0.1rem var(--purple) solid;
+   border-radius: 1rem;
+   cursor: pointer;
+   transition: 0.5s;
+}
+
+.add__task:hover {
+   opacity: 0.7;
+   background-image: linear-gradient(to left, var(--pink), var(--purple));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.add__task:active {
+   opacity: 0.5;
+}
+
+main {
+   flex: 1 1 0%;
+   padding: 5vh 1vw;
+   max-width: 800px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+main h2 {
+   font-size: 1.5rem;
+   font-weight: 300;
+   color: var(--gray);
+   margin-bottom: 2vh;
+   
+}
+
+#tasks .task {
+   display: flex;
+   justify-content: space-between;
+   background-color: var(--darkest);
+   border-radius: 1rem;
+   height: 6vh;
+   margin-top: 1vh;
+   margin-right: 1vw;
+   padding-left: 1vw;
+}
+
+.inputText {
+   display: block;
+   font-size: 1.25rem;
+   color: var(--light);
+   width: 100%;
+}
+
+#inputText .inputText:not(:read-only) {
+   color: #101725;
+} /*doesnt work*/
+
+
+
+.buttons {
+   display: flex;
+   margin-right: 0.5vw;
+}
+
+.buttons button {
+   cursor: pointer;
+   font-size: 1.13rem;
+   font-weight: 700;
+   margin: 0 0.5vw;
+}
+
+.buttons button:hover {
+   transition: 0.4s;
+   font-size: 1.16rem;
+   font-weight: 710;
+}
+
+.edit {
+   background-image: linear-gradient(to right, var(--pink), var(--purple));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.edit:hover{
+   transition: 0.6s;
+   background-image: linear-gradient(to left, var(--pink), var(--purple));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.delete {
+   background-image: linear-gradient(to right, var(--red), var(--violet));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.delete:hover{
+   transition: 0.6s;
+   background-image: linear-gradient(to left, var(--red), var(--violet));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+/* change the color of the text while editing 
+   move the field when focusing
+   effects when deleting
+*/
